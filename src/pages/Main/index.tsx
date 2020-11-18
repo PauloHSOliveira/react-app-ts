@@ -6,7 +6,7 @@ import CardPrices from '../../components/CardPrices';
 
 import api from '../../services/api';
 
-const Main: React.FC = () => {
+const Main: React.FC = (): React.ReactElement => {
   const [low, setLow] = React.useState(0);
   const [high, setHigh] = React.useState(0);
   const [buy, setBuy] = React.useState(0);
