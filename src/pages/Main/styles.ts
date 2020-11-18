@@ -9,9 +9,10 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 700px;
+  max-width: 1100px;
   width: 100%;
-  height: 500px;
+  height: 700px;
   background: ${(props) => props.theme.secondary};
+  border-radius: 4px;
   margin: auto;
 `;

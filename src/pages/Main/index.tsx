@@ -6,8 +6,8 @@ import { Container, Content } from './styles';
 
 const pages: React.FC = () => {
   const colors = {
-    primary: '#000',
-    secondary: '#bfbfbf',
+    primary: '#1a1a1a',
+    secondary: '#fff',
   };
 
   return (
