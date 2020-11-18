@@ -28,7 +28,7 @@
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
   },
-  "precommit": "npm run lint && npm run format",
+  "pre-commit": "npm run lint && npm run format",
   "eslintConfig": {
     "extends": [
       "react-app",
