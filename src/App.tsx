@@ -10,8 +10,8 @@ function App() {
   const colors = {
     primary: '#1c161c',
     secondary: '#fff',
-    red: '#d41010',
-    green: '#0c942e',
+    red: '#ff0c04',
+    green: '#09f069',
   };
 
   return (
