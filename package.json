@@ -25,6 +25,7 @@
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
   },
+  "precommit": "npm run lint && npm run format",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -57,6 +58,7 @@
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.0.0",
     "git-commit-msg-linter": "^3.0.0",
+    "husky": "^4.3.0",
     "prettier": "^2.1.2"
   }
 }
