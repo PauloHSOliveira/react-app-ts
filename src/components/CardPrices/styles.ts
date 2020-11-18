@@ -5,9 +5,6 @@ export const Container = styled.div`
   height: 100px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid;
-  border-color: ${(props) => props.theme.primary};
-  border-radius: 4px;
 `;
 
 export const CardItem = styled.div`
@@ -20,6 +17,7 @@ export const CardItem = styled.div`
 export const CardTitle = styled.span`
   font-size: 17px;
   margin-bottom: 10px;
+  color: #bfbfbf;
 `;
 
 export const Low = styled.span`
