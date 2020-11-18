@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { ThemeProvider } from 'styled-components';
-
 import { Container, Content } from './styles';
 
 import CardPrices from '../../components/CardPrices';
