@@ -4,21 +4,32 @@ import { ThemeProvider } from 'styled-components';
 
 import { Container, Content } from './styles';
 
-const pages: React.FC = () => {
-  const colors = {
-    primary: '#1a1a1a',
-    secondary: '#fff',
-  };
+import CardPrices from '../../components/CardPrices';
+
+import api from '../../services/api';
+
+const Main: React.FC = () => {
+  const [low, setLow] = React.useState(0);
+  const [high, setHigh] = React.useState(0);
+
+  React.useEffect(() => {
+    const getData = async () => {
+      await api.get('api/BTC/ticker/').then((res) => {
+        const { low: nLow, high: nHigh } = res.data.ticker;
+        setLow(nLow);
+        setHigh(nHigh);
+      });
+    };
+    getData();
+  }, []);
 
   return (
-    <ThemeProvider theme={colors}>
-      <Container>
-        <Content>
-          <h1>teste</h1>
-        </Content>
-      </Container>
-    </ThemeProvider>
+    <Container>
+      <Content>
+        <CardPrices low={low} high={high} />
+      </Content>
+    </Container>
   );
 };
 
-export default pages;
+export default Main;

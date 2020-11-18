@@ -15,4 +15,6 @@ export const Content = styled.div`
   background: ${(props) => props.theme.secondary};
   border-radius: 4px;
   margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
 `;
