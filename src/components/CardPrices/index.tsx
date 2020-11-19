@@ -1,5 +1,6 @@
 import React from 'react';
 
+import MaskPrice from '../../utils/MaskPrice';
 import { Container, CardItem, CardTitle, Low, High } from './styles';
 
 interface CardProps {
@@ -11,14 +12,6 @@ interface CardProps {
 
 function CardPrices(props: CardProps): React.ReactElement {
   const { low, high, buy, sell } = props;
-
-  const MaskPrice = (price: number): string => {
-    const formatNumber = new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    });
-    return formatNumber.format(price);
-  };
 
   return (
     <Container>
@@ -36,7 +29,7 @@ function CardPrices(props: CardProps): React.ReactElement {
       </CardItem>
       <CardItem>
         <CardTitle>Menor oferta de venda</CardTitle>
-        <High>{MaskPrice(sell)}</High>
+        <Low>{MaskPrice(sell)}</Low>
       </CardItem>
     </Container>
   );
